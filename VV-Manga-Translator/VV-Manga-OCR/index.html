@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>VVMangaOCR 隐私政策</title>
+    <meta name="description" content="VVMangaOCR 的隐私政策（用于 Google Play 上架）。" />
+    <style>
+      :root {
+        --bg: #0b0c0f;
+        --card: #11131a;
+        --text: #e9eef6;
+        --muted: #a9b4c5;
+        --border: rgba(255, 255, 255, 0.12);
+        --link: #7cc4ff;
+        --good: #42d392;
+        --warn: #f6c177;
+        --bad: #ff7a90;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        --radius: 14px;
+        --maxw: 980px;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --card: #ffffff;
+          --text: #141821;
+          --muted: #5c667a;
+          --border: rgba(0, 0, 0, 0.1);
+          --link: #0b66c3;
+          --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+        }
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          "Noto Sans",
+          "Liberation Sans",
+          sans-serif;
+        line-height: 1.6;
+        background: radial-gradient(1200px 700px at 20% -10%, rgba(124, 196, 255, 0.18), transparent 60%),
+          radial-gradient(900px 600px at 90% 10%, rgba(66, 211, 146, 0.12), transparent 55%),
+          var(--bg);
+        color: var(--text);
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 28px 16px 56px;
+      }
+
+      header {
+        padding: 22px 0 16px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 30px;
+        letter-spacing: 0.2px;
+      }
+
+      .meta {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid var(--border);
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--card), transparent 15%);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      @media (min-width: 920px) {
+        .grid {
+          grid-template-columns: 340px 1fr;
+          align-items: start;
+        }
+      }
+
+      nav,
+      main {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--card);
+        box-shadow: var(--shadow);
+      }
+
+      nav {
+        padding: 14px;
+        position: sticky;
+        top: 12px;
+      }
+
+      nav h2 {
+        margin: 6px 10px 10px;
+        font-size: 14px;
+        color: var(--muted);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .toc {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .toc li a {
+        display: block;
+        padding: 9px 10px;
+        border-radius: 10px;
+        color: var(--text);
+      }
+
+      .toc li a:hover {
+        background: color-mix(in srgb, var(--border), transparent 75%);
+        text-decoration: none;
+      }
+
+      main {
+        padding: 18px 18px 8px;
+      }
+
+      section {
+        padding: 10px 2px 18px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      section:last-child {
+        border-bottom: 0;
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        scroll-margin-top: 18px;
+      }
+
+      p {
+        margin: 10px 0;
+        color: color-mix(in srgb, var(--text), var(--muted) 14%);
+      }
+
+      ul {
+        margin: 10px 0 0 18px;
+        padding: 0;
+      }
+
+      li {
+        margin: 6px 0;
+      }
+
+      code {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          "Liberation Mono",
+          "Courier New",
+          monospace;
+        font-size: 0.95em;
+      }
+
+      .note {
+        border: 1px solid var(--border);
+        border-left-width: 4px;
+        border-left-color: var(--warn);
+        border-radius: 12px;
+        padding: 12px 12px;
+        margin: 12px 0;
+        background: color-mix(in srgb, var(--card), transparent 8%);
+      }
+
+      .good {
+        border-left-color: var(--good);
+      }
+
+      .bad {
+        border-left-color: var(--bad);
+      }
+
+      .kvs {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      @media (min-width: 720px) {
+        .kvs {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .kv {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 12px 12px;
+        background: color-mix(in srgb, var(--card), transparent 6%);
+      }
+
+      .kv strong {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+      }
+
+      footer {
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+          color: #000;
+        }
+        nav {
+          display: none;
+        }
+        main,
+        nav {
+          box-shadow: none;
+        }
+        a {
+          color: #000;
+          text-decoration: underline;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>VVMangaOCR 隐私政策</h1>
+        <div class="meta">
+          <span class="pill"><strong>生效日期</strong>&nbsp;2026-01-03</span>
+          <span class="pill"><strong>应用包名</strong>&nbsp;<code>toaru.vivian.manga.ocr</code></span>
+          <span class="pill"><strong>开发者</strong>&nbsp;Vivian</span>
+        </div>
+      </header>
+
+      <div class="grid">
+        <nav aria-label="目录">
+          <h2>目录</h2>
+          <ul class="toc">
+            <li><a href="#scope">适用范围</a></li>
+            <li><a href="#collection">我们收集哪些信息</a></li>
+            <li><a href="#processing">我们如何处理图片/文本</a></li>
+            <li><a href="#storage">本地存储与保留</a></li>
+            <li><a href="#sharing">信息共享与披露</a></li>
+            <li><a href="#thirdparty">第三方服务</a></li>
+            <li><a href="#permissions">系统权限说明</a></li>
+            <li><a href="#security">信息安全</a></li>
+            <li><a href="#children">未成年人隐私</a></li>
+            <li><a href="#changes">政策更新</a></li>
+            <li><a href="#contact">联系我们</a></li>
+          </ul>
+        </nav>
+
+        <main>
+          <section id="scope">
+            <h2>适用范围</h2>
+            <p>
+              本隐私政策适用于由 Vivian（以下简称“我们”）开发并提供的移动应用 <strong>VVMangaOCR</strong>（以下简称“本应用”）。
+              本政策说明我们如何处理与您相关的信息，以及您拥有的权利与选择。
+            </p>
+          </section>
+
+          <section id="collection">
+            <h2>我们收集哪些信息</h2>
+            <div class="note good">
+              <strong>概览：</strong>我们不会主动收集、上传或出售您的个人信息；本应用不要求您注册账号或登录。
+            </div>
+            <div class="kvs">
+              <div class="kv">
+                <strong>我们不收集</strong>
+                <ul>
+                  <li>姓名、手机号、邮箱、证件信息等身份信息</li>
+                  <li>精确或粗略位置信息</li>
+                  <li>联系人、短信、通话记录</li>
+                  <li>广告标识符、跨应用跟踪标识（例如用于广告投放/归因）</li>
+                </ul>
+              </div>
+              <div class="kv">
+                <strong>我们可能在本机产生</strong>
+                <ul>
+                  <li>应用设置（例如主题偏好）</li>
+                  <li>您在应用内选择处理的图片、以及识别得到的文本结果（仅用于功能展示/复制/导出）</li>
+                  <li>必要的临时缓存（可在系统中清理）</li>
+                </ul>
+              </div>
+            </div>
+            <p class="note">
+              若未来版本引入需要联网或第三方 SDK 的功能（例如云端 OCR、在线翻译、崩溃收集、统计分析或广告服务），我们会更新本隐私政策并进行必要提示。
+            </p>
+          </section>
+
+          <section id="processing">
+            <h2>我们如何处理图片/文本</h2>
+            <p>
+              本应用定位为本地工具类应用。您在本应用中选择或输入的内容（例如图片与文本）用于完成您主动发起的功能（例如识别/显示/复制/导出）。
+            </p>
+            <ul>
+              <li>默认情况下，图片与识别过程在设备本地完成，我们不会将图片内容上传至我们的服务器。</li>
+              <li>如您使用系统分享功能（例如分享到其他应用），数据将由您选择的目标应用按其隐私政策进行处理。</li>
+            </ul>
+          </section>
+
+          <section id="storage">
+            <h2>本地存储与保留</h2>
+            <ul>
+              <li>我们可能在设备的应用私有存储中保存必要的数据（例如设置、缓存、您选择保存的识别结果）。</li>
+              <li>您可以通过 Android 系统的“应用信息 → 存储与缓存”清理缓存或清除数据；卸载本应用会移除本应用在设备上的本地数据。</li>
+              <li>若您在系统中开启了 Android 备份/恢复功能，部分应用数据可能由 Android/Google 备份到您的 Google 账号（该备份由系统控制，我们无法访问）。</li>
+            </ul>
+          </section>
+
+          <section id="sharing">
+            <h2>信息共享与披露</h2>
+            <div class="note good">
+              <strong>我们不会</strong>向第三方出售您的个人信息，也不会将您的图片/文本内容上传到我们的服务器进行处理（除非您主动使用未来可能提供的云端功能并明确知情同意）。
+            </div>
+            <p>在以下情形，我们可能依法披露必要信息：</p>
+            <ul>
+              <li>为遵守适用法律法规、司法程序或政府强制性要求；</li>
+              <li>为保护我们、用户或公众的合法权益与安全（例如防止欺诈、处理安全事件）。</li>
+            </ul>
+          </section>
+
+          <section id="thirdparty">
+            <h2>第三方服务</h2>
+            <p>本应用可能使用以下第三方/系统能力：</p>
+            <ul>
+              <li>
+                <strong>Google Play 服务（可下载字体）</strong>：本应用可能通过
+                <code>com.google.android.gms.fonts</code> 提供的字体服务下载字体资源。该过程可能会与 Google 通信并产生网络请求（例如 IP 地址、设备信息等由第三方按其规则处理）。
+                详情请参考
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer noopener">Google 隐私政策</a>。
+              </li>
+            </ul>
+            <div class="note">
+              如您希望完全离线使用并避免可下载字体产生的网络请求，可在发布前将字体改为内置字体文件或系统字体（这属于应用实现选择，与本页面可独立更新）。
+            </div>
+          </section>
+
+          <section id="permissions">
+            <h2>系统权限说明</h2>
+            <p>本应用当前版本不要求您授予 Android 危险权限（例如定位、通讯录、麦克风等）。</p>
+            <p>如未来版本因新增功能需要请求权限，我们会在请求时向您说明用途，您也可以在系统设置中随时授予或撤销。</p>
+          </section>
+
+          <section id="security">
+            <h2>信息安全</h2>
+            <ul>
+              <li>我们尽力使用合理的技术与管理措施保护信息安全（例如使用应用私有目录存储数据）。</li>
+              <li>互联网传输与电子存储并非 100% 安全，我们无法保证绝对安全，但会在发现风险时尽力采取补救措施。</li>
+            </ul>
+          </section>
+
+          <section id="children">
+            <h2>未成年人隐私</h2>
+            <p>
+              本应用不以未成年人为目标用户，我们也不会有意收集未成年人的个人信息。若您认为我们可能在未经监护人同意的情况下处理了未成年人的个人信息，请通过下方联系方式联系我们，我们将尽快核实并处理。
+            </p>
+          </section>
+
+          <section id="changes">
+            <h2>政策更新</h2>
+            <p>
+              我们可能不时更新本隐私政策。更新后我们会在本页面发布最新版本，并更新“生效日期”。如变更涉及重大内容，我们将以更显著方式提示（例如在应用内提示）。
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2>联系我们</h2>
+            <p>如您对本隐私政策有任何疑问、意见或请求，请通过以下方式联系我们：</p>
+            <ul>
+              <li>开发者：Vivian</li>
+              <li>联系邮箱：<a href="mailto:vivan.toaru@gmail.com">vivan.toaru@gmail.com</a></li>
+            </ul>
+          </section>
+        </main>
+      </div>
+
+      <footer>
+        <p>提示：本页面用于 Google Play “隐私政策”链接。请将此 HTML 托管到可公开访问的 HTTPS 地址后，再在 Google Play Console 中填写对应链接。</p>
+      </footer>
+    </div>
+  </body>
+</html>
